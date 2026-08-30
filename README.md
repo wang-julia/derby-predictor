@@ -1,1 +1,5 @@
 # derby-predictor
+The Kentucky Derby and its prep-race circuit are notoriously hard to handicap because three-year-old horses face conditions (distances, fields, and competition) they've rarely or never encountered. This means that posted odds often reflect public sentiment more than measurable form. This project addresses that gap in three connected stages: 
+  1. Trains a calibrated machine-learning model to estimate each horse's true win probability from measurable factors like recent form, class, pace, and trainer/jockey strength, ensuring those probabilities are numerically trustworthy rather than just rank-ordered.
+  2. Converts those calibrated probabilities into priced bets via Monte Carlo simulation and sizes each position with the Kelly criterion, so that every recommendation reflects both a fair price and a bankroll-appropriate stake rather than a binary buy/skip signal.
+  3. Validates the entire resulting strategy with a risk-adjusted historical backtest (reporting Sharpe-style ratio, maximum drawdown, and Closing Line Value alongside ROI) so the final result can be judged as a defensible, risk-aware strategy rather than a single lucky number.
